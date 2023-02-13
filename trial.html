@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Style the header section */
+      header {
+        background-color: #8FEBA5;
+        color: red;
+        padding: 1em;
+        text-align: center;
+      }
+
+      /* Style the navigation bar */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: blue;
+        padding: 1em;
+      }
+
+      /* Style the navigation links */
+      nav a {
+        color: green;
+        text-decoration: none;
+        margin-right: 1em;
+      }
+
+      /* Style the main content area */
+      main {
+        background-color: #ddd;
+        padding: 1em;
+        text-align: center;
+      }
+
+      /* Style the footer */
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 1em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Bidyut Chowdhury</h1>
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <main>
+      <h2>Welcome to my website</h2>
+      <p>Click on the navigation links above to explore</p>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2023</p>
+    </footer>
+
+    <!-- Add JavaScript for dynamic navigation -->
+    <script>
+      const navLinks = document.querySelectorAll("nav a");
+      navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+          // Remove the "active" class from all links
+          navLinks.forEach(link => link.classList.remove("active"));
+
+          // Add the "active" class to the clicked link
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
